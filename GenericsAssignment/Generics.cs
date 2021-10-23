@@ -4,7 +4,7 @@ namespace GenericsAssignment
 {
     class Generics
     {
-        public static int FindMaxNumber(int first, int second, int third)
+        public static float FindMaxNumber(float first, float second, float third)
         {
             if (first.CompareTo(second) > 0 && first.CompareTo(third) > 0)
             {
@@ -26,8 +26,8 @@ namespace GenericsAssignment
         }
         static void Main(string[] args)
         {
-            int maxNumber = Generics.FindMaxNumber(32, 45, 60);
-            Console.WriteLine("The Maximun Integer is : " + maxNumber);
+            float  maxNumber = Generics.FindMaxNumber(10.86f,33.47f,65.28f);
+            Console.WriteLine("The Maximun float number is : " + maxNumber);
         }
 
     }
