@@ -1,11 +1,23 @@
 ﻿using System;
+using System.Collections;
 
 namespace GenericsAssignment
 {
-    class Generics
+    class Generics<T> where T:IComparable 
     {
-        public static string FindMaxNumber(string first, string second, string third)
+        //instance variable
+        private T first, second, third;
+        // constructor
+        public Generics (T first,T second, T third)
         {
+            this.first = first;
+            this.second = second;
+            this.third = third;
+        }
+
+        public T FindMaxNumber()
+        {
+            //finding maximum number by using CompareTo() method
             if (first.CompareTo(second) > 0 && first.CompareTo(third) > 0)
             {
                 return first;
@@ -24,11 +36,7 @@ namespace GenericsAssignment
                 return default;
             }
         }
-        static void Main(string[] args)
-        {
-            string maxValue = Generics.FindMaxNumber("Apple","Banana","Peach");
-            Console.WriteLine("The Maximun String is : " + maxValue);
-        }
+       
 
     }
 }
